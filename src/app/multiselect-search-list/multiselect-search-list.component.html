@@ -1,0 +1,11 @@
+    
+    <input type="text"
+           placeholder={{listName}}
+           [formControl]="control"
+		    [matAutocomplete]="auto"           
+    >
+    <mat-autocomplete #auto="matAutocomplete">
+      @for (item of productosFiltrados | async; track item) {
+        <mat-option [value]="item">{{item}}</mat-option>
+      }
+    </mat-autocomplete>

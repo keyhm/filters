@@ -1,0 +1,41 @@
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Filtros de Transacción</mat-panel-title>
+      <mat-panel-description> Filtros relacionados con Transacción </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-grid-list cols="2" rowHeight="150px">
+      <mat-grid-tile>
+        <app-date-range></app-date-range>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-multiselect-list [inputList]="canalList" listName="Canales"></app-multiselect-list>    
+      </mat-grid-tile>
+    </mat-grid-list>  
+  </mat-expansion-panel>
+
+    <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Filtros de Productos </mat-panel-title>
+      <mat-panel-description> Filtros relacionados con la dimensión Productos </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-grid-list cols="2" rowHeight="350px">
+      <mat-grid-tile>
+        <app-multiselect-list [inputList]="coeList" listName="CoE"></app-multiselect-list>
+        <app-multiselect-search-list [inputList]="productosList" listName="Productos"></app-multiselect-search-list>
+        <app-selected-items-list [inputList]="productosList" listName="Productos"></app-selected-items-list>        
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Filtros de Entidad </mat-panel-title>
+      <mat-panel-description> Filtros relacionados con la dimensión Entidad </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-multiselect-list [inputList]="verticalList" listName="Vertical"></app-multiselect-list>
+    <app-multiselect-search-list [inputList]="entidadesList" listName="Entidades"></app-multiselect-search-list>
+  </mat-expansion-panel>
+
+
+</mat-accordion>

@@ -1,0 +1,8 @@
+<mat-form-field>
+    <mat-label>{{ listName }}</mat-label>
+    <mat-select [formControl]="filtro" multiple>
+        @for (item of inputList; track item) {
+            <mat-option [value]="item">{{item}}</mat-option>
+          }
+    </mat-select>
+  </mat-form-field>
